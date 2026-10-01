@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BillBook – Invoice Generator</title>
+<meta name="theme-color" content="#1d3557">
+<meta name="description" content="Offline invoice and bill generator. All data stays on your device.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1 id="title">Dashboard</h1>
+  <div class="hb"><button id="installBtn" class="btn sm" hidden>Install App</button><button id="themeBtn" class="btn sm" aria-label="Switch light or dark theme"></button></div>
+</header>
+<main>
+  <section id="v-dashboard" class="view"></section>
+  <section id="v-create" class="view" hidden></section>
+  <section id="v-history" class="view" hidden></section>
+  <section id="v-customers" class="view" hidden></section>
+  <section id="v-settings" class="view" hidden></section>
+</main>
+<nav class="bar" aria-label="Main">
+  <button data-go="dashboard"><i>🏠</i>Home</button>
+  <button data-go="create" class="fab"><i>＋</i>Create Bill</button>
+  <button data-go="history"><i>🕘</i>History</button>
+  <button data-go="customers"><i>👥</i>Customers</button>
+  <button data-go="settings"><i>⚙️</i>Settings</button>
+</nav>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="dlg"></dialog>
+<div id="printArea" aria-hidden="true"></div>
+<noscript>BillBook needs JavaScript to run.</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+</body>
+</html>
